@@ -20,6 +20,40 @@ export class QuoteComponent implements OnInit {
     new Quote(9,new Date(2021,5,14),"Miss lenno","Ajay lee","Don’t settle for what life gives you; make life better and build something",0,0),
     new Quote(10,new Date(2021,5,14),"Jossie","Christian dior","You never really learn much from hearing yourself speak ",0,0)
   ];
+
+
+  addNewQuote(quote: { userName: string; author: string; quote: string; }){
+    let quotesLength=this.quotes.length+1;
+
+    let quoteObj=new Quote(quotesLength,new Date,quote.userName,quote.author,quote.quote,0,0,false);
+
+    this.quotes.push(quoteObj);
+  }
+  toggleDetails(index:number){
+    this.quotes[index].showQuoteDetails=!this.quotes[index].showQuoteDetails
+  }
+  deleteQuote(isDeleted: any,index: number){
+
+    if(isDeleted){
+      let remove=confirm(`Are you sure you want to delete this ${this.quotes[index].quote}?`)
+      if(remove){
+        this.quotes.splice(index,1)
+      }
+    }
+
+  }
+  upvoteFunc(index: number){
+    var up=this.quotes[index].upvote+1;
+    this.quotes[index].upvote=up;
+    
+}
+
+
+downvoteFunc(index:  number){
+  var down=this.quotes[index].downvote+1;
+  this.quotes[index].downvote=down;
+
+}
   constructor() { }
 
   ngOnInit() {

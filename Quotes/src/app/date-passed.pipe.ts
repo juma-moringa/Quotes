@@ -5,6 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DatePassedPipe implements PipeTransform {
   
+
   transform(value: any): number {
     let today:any=new Date();
   
