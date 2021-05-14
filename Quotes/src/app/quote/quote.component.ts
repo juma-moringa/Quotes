@@ -19,6 +19,7 @@ export class QuoteComponent implements OnInit {
     new Quote(8,new Date(2021,4,19),"Ammoh skito","Oslo wils"," In order to write about life first you must live it.",0,0),
     new Quote(9,new Date(2021,5,14),"Miss lenno","Ajay lee","Don’t settle for what life gives you; make life better and build something",0,0),
     new Quote(10,new Date(2021,5,14),"Jossie","Christian dior","You never really learn much from hearing yourself speak ",0,0)
+  ];
   constructor() { }
 
   ngOnInit() {
