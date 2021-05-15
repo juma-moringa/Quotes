@@ -8,7 +8,10 @@ export class Quote {
         public author:string,
         public quote:string,
         public upvote:number,
-        public downvote:number){
+        public downvote:number,
+        public show:boolean = false,
+        public buttonName:any = 'Show'
+        ){
 
         this.showQuoteDetails=false;
     }

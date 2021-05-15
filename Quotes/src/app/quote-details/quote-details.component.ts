@@ -13,7 +13,11 @@ export class QuoteDetailsComponent implements OnInit {
 
   quoteDeletion(remove:boolean){
     this.isDeleted.emit(remove);
+
   }
+toggleDetails(){
+  
+}
   constructor() { }
 
   ngOnInit() {

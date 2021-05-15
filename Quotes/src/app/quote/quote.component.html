@@ -15,9 +15,11 @@
             <div class="card" *ngFor="let quote of quotes;let i=index">
                 
                 <div class="card-body">
-                    <h5 class="card-title"(click)='toggleDetails(i)'>{{quote.id}} <br><i class="fas  fa-quote-left    "></i> <br> <br> <br>{{quote.quote}}  <br><i class="fas  fa-quote-right    "></i> {{quote.datePosted|date:'short'}}</h5>
+                  
+                    <h5 class="card-title">{{quote.id}} <br><i class="fas  fa-quote-left    "></i> <br> <br> <br>{{quote.quote}}  <br><i class="fas  fa-quote-right    "></i> {{quote.datePosted|date:'short'}}</h5><button id="more"(click)='toggleDetails(i)'>see more</button>
                     <div class="card-text"*ngIf="quote.showQuoteDetails">
-                      <p><i class="far fa-thumbs-up    " (click)='upvoteFunc(i)'></i>  <i style="text-indent: 2em;" (click)='downvoteFunc(i)' class="far fa-thumbs-down    "></i></p>
+                      <button id="less" (click)='toggleDetails(i)'>see less</button>
+                      <p><i class="far fa-thumbs-up " (click)='upvoteFunc(i)'></i>  <i style="text-indent: 2em;" (click)='downvoteFunc(i)' class="far fa-thumbs-down    "></i></p>
                       <app-quote-details [quote]='quote' (isDeleted)='deleteQuote($event,i)'></app-quote-details>
   
                   </div>
