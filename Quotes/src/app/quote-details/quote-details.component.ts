@@ -1,4 +1,5 @@
-import { Quote } from '@angular/compiler';
+// import { Quote } from '@angular/compiler';
+import { Quote } from '../quote';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
-  @Input() quote:Quote | undefined;
+  @Input() quote!:Quote;
   @Output() isDeleted=new EventEmitter<boolean>();
 
   quoteDeletion(remove:boolean){

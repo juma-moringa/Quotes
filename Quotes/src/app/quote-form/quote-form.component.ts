@@ -1,6 +1,6 @@
-import { Quote } from '@angular/compiler';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Quote } from '../quote';
 
 @Component({
   selector: 'app-quote-form',
@@ -19,7 +19,7 @@ export class QuoteFormComponent implements OnInit {
   }
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }

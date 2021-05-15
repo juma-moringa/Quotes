@@ -25,14 +25,14 @@ export class QuoteComponent implements OnInit {
   addNewQuote(quote: { userName: string; author: string; quote: string; }){
     let quotesLength=this.quotes.length+1;
 
-    let quoteObj=new Quote(quotesLength,new Date,quote.userName,quote.author,quote.quote,0,0,false);
+    let quoteObj=new Quote(quotesLength,new Date,quote.userName,quote.author,quote.quote,0,0,);
 
     this.quotes.push(quoteObj);
   }
-  toggleDetails(index:number){
+  toggleDetails(index:any){
     this.quotes[index].showQuoteDetails=!this.quotes[index].showQuoteDetails
   }
-  deleteQuote(isDeleted: any,index: number){
+  deleteQuote(isDeleted: any,index: any){
 
     if(isDeleted){
       let remove=confirm(`Are you sure you want to delete this ${this.quotes[index].quote}?`)
