@@ -1,10 +1,12 @@
-<div class="container-fluid">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<div class="container-fluid" >
 
   <hr>
-  <p><small class="text-muted"> Author :</small> {{quote.author}}</p>
-  <p><small class="text-muted">Uploaded by: </small> {{quote.userName}}</p>
-  <p><small class="text-muted">Pinned - </small> {{quote.datePosted|datePassed}} days ago</p>
-  <p> <span class="like">{{quote.upvote}} Upvotes </span><br><span class="dovt">{{quote.downvote}} Downvotes</span></p>
+  <p style="font-family: 'Indie Flower', cursive;"><small class="text-muted"> Author :</small> {{quote.author}}</p>
+  <p style="font-family: 'Indie Flower', cursive;"><small class="text-muted">Uploaded by: </small> {{quote.userName}}</p>
+  <p style="font-family: 'Indie Flower', cursive;"><small class="text-muted">Pinned - </small> {{quote.datePosted|datePassed}} days ago</p>
+  <p style="font-family: 'Indie Flower', cursive; "> <span class="like">{{quote.upvote}} Upvotes </span><br><span class="dovt">{{quote.downvote}} Downvotes</span></p>
   <hr>
   <i style=" color:red;"class="fas fa-trash-alt"  (click)='quoteDeletion(true)'></i>
   <!-- <button >Delete</button> -->
