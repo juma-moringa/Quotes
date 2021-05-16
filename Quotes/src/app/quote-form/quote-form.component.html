@@ -1,15 +1,16 @@
 <br>
 <br>
-<h4 class="text-center"> Jays Quotes of wisdom. </h4>
+<h2 style="font-family: 'Indie Flower', cursive;" class="text-center"> Jays Quotes of wisdom. </h2>
 <hr>
 <hr>
 <div class="container-fluid">
+  <h3 style="font-family: 'Indie Flower', cursive;">Add Quote</h3>
   <form (ngSubmit)="onSubmit(form)" #form="ngForm">
 
     <div class="modal-body">
 
       <div class="form-group">
-        <label for="">Name</label>
+        <label for=""style="font-family: 'Indie Flower', cursive;">Name</label>
         <input type="text" name="userName" id="userName" class="form-control" placeholder="Please input your name..."
           required #userName='ngModel' [(ngModel)]="newQuote.userName">
         <div [hidden]="userName.value||userName.pristine" class="alert alert-danger">
@@ -20,7 +21,7 @@
       <div class="row">
         <div class="col-md-8">
           <div class="form-group">
-            <label for="">Quote</label>
+            <label for=""style="font-family: 'Indie Flower', cursive;">Quote</label>
             <textarea class="form-control" name="quote" id="quote" rows="3" placeholder="Please input Quote" required
               #quote='ngModel' [(ngModel)]="newQuote.quote"></textarea>
             <div [hidden]="quote.value||quote.pristine" class="alert alert-danger">
@@ -30,7 +31,7 @@
         </div>
         <div class="col-md-4">
           <div class="form-group">
-            <label for="">Author</label>
+            <label for="" style="font-family: 'Indie Flower', cursive;">Author</label>
             <input type="text" name="author" id="author" class="form-control" placeholder="Please input authors name..."
               required #author='ngModel' [(ngModel)]="newQuote.author">
             <div [hidden]="author.value||author.pristine" class="alert alert-danger">
@@ -42,7 +43,7 @@
 
     </div>
     <div class="modal-footer">
-      <button type="submit" class="btn btn-success ">ADD</button>
+      <button type="submit" class="btn btn-info"style="font-family: 'Indie Flower', cursive;">ADD</button>
     </div>
   </form>
 </div>
