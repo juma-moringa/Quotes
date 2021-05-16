@@ -2,23 +2,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 <div class="maincontent">
-    <nav class="nav justify-content-center navbar-fixed-top navbar-light bg-success">
+    <nav class="nav justify-content-center navbar-fixed-top navbar-light bg-secondary">
 
         <div class="navbar-nav ml-auto">
             <app-quote-form  (addQuote)='addNewQuote($event)'></app-quote-form>
         </div>    
       
     </nav>
-    <div class="quotes">
+    <div class="quotes" style="font-family: 'Indie Flower', cursive;" >
       <div class="container">
-        <h4 style="font-family: 'Indie Flower', cursive;"class="text-center">My Quotes. </h4>
+        <h4 class="text-center">My Quotes. </h4>
 
         <div class="">
             <div class="card  p-3 mb-3" *ngFor="let quote of quotes;let i=index">
-                
+              
                 <div class="card-body">
                   
-                    <h5 style="font-family: 'Indie Flower', cursive;" class="card-title">{{quote.id}} <br><i class="fas  fa-quote-left    "></i>   <br>{{quote.quote}}  <br><i class="fas  fa-quote-right    "><br></i> <br>{{quote.datePosted|date:'short'}}</h5><button id="more"(click)='toggleDetails(i)'class="btn btn-info rounded-pill">See More</button>
+                    <h5 class="card-title">{{quote.id}} <br><i class="fas  fa-quote-left    "></i>   <br> <div id = {{i}} class="header">
+                      <h5 *ngIf='quote.upvote !== findMax() || quote.upvote === 0'>{{ quote.quote }}</h5>
+                      <div *ngIf='quote.upvote === findMax() && quote.upvote > 0'>
+                          <h5 appHighlight>{{ quote.quote }}</h5>
+                      </div>
+                    </div> <br><i class="fas  fa-quote-right    "><br></i> <br>{{quote.datePosted|date:'short'}}</h5><button id="more"(click)='toggleDetails(i)'class="btn btn-info rounded-pill">See More</button>
                     <div class="card-text"*ngIf="quote.showQuoteDetails">
                       <button id="less" (click)='toggleDetails(i)'class="btn btn-info">see less</button>
                       <br><br>
