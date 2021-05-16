@@ -1,4 +1,4 @@
-# Quotes Apllication
+# Quotes Application
 
 ## Author
 Juma Allan
@@ -40,10 +40,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 1. Angular CLI
 1. Bootstrap
 
+1. __Enjoy :)__
+Enjoy
 ### Live Site
 
-View [live](add the .io link)
+View [live]( https://juma-moringa.github.io/Quotes/)
 
-### Licence
+### License
 
 This project is under the  [MIT](LICENSE) licence.
