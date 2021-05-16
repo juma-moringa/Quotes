@@ -54,6 +54,9 @@ downvoteFunc(index:  number){
   this.quotes[index].downvote=down;
 
 }
+findMax() {
+  return Math.max.apply(Math, this.quotes.map((quote) => quote.upvote));
+}
   constructor() { }
 
   ngOnInit() {
