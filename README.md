@@ -1,6 +1,8 @@
 # Quotes Apllication
+
 ## Author
 Juma Allan
+
 ## Description
 Its an application that displays quote ,and a user is able to add new quote and also delete the quote.The quotes also can be upvoted and downvoted  according to the user preferences.
 
@@ -30,13 +32,18 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
 ### Technologies Used
 1. HTML
 1. CSS
 1. Git
 1. Angular CLI
 1. Bootstrap
+
 ### Live Site
+
 View [live](add the .io link)
+
 ### Licence
+
 This project is under the  [MIT](LICENSE) licence.
